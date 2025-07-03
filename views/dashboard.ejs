@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>I am the dashboard <%= name %></h1>
+
+    <% if (gender == "male") { %>
+    <h1>This is a male child</h1>
+    <% } else { %>
+    <h1>This is a female child</h1>
+    <% } %> 
+    
+    <% for( let index = 0; index < allUsers.length; index++ ) { %>
+    <h1><%= allUsers[index].firstname %> <%= allUsers[index].lastname %></h1>
+   
+    <% } %> 
+    
+    <% allUsers.map((users)=> { %>
+    <h1><%= users.firstname %></h1>
+
+    <% }) %>
+  </body>
+</html>
